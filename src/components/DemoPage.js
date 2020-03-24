@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import'../styles/DemoPage.css'
+import'../styles/css/DemoPage.css'
 import TopBar from './TopBar'
 import NavBar from './NavBar'
 import Content from './Content'

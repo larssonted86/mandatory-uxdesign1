@@ -6,7 +6,7 @@ import Checkboxes from './Checkboxes'
 import Radiobuttons from './Radiobuttons'
 import Switches from './Switches'
 
-import '../styles/Content.css'
+import '../styles/css/Content.css'
 
 
 

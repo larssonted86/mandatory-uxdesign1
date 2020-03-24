@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import '../styles/NavBar.css'
+import '../styles/css/NavBar.css'
 import {ReactComponent as Home} from '../styles/images/home.svg';
 import {ReactComponent as TextfieldIcon} from '../styles/images/textfieldIcon.svg';
 import {ReactComponent as CheckboxIcon} from '../styles/images/checkboxIcon.svg';
