@@ -11,12 +11,15 @@ import '../styles/css/Content.css'
 
 
 export class Content extends Component {
+  
 
  renderContentSwitch = (content) => {
     switch(content){
       case 'Textfields':
         return <div>
-          <TextFieldFilled /> 
+          <TextFieldFilled 
+          value = {this.props.value}
+          setValue = {this.props.setValue}/> 
           <TextFieldOutlined />
         </div>;
 
@@ -34,7 +37,7 @@ export class Content extends Component {
     }
   }
   render() {
-    console.log(this.props.content)
+    console.log(this.props)
 
     return (
       <div className = 'content'>

@@ -6,7 +6,14 @@ import Content from './Content'
 
 export class DemoPage extends Component {
   state = {
-    nav: 'Home'
+    nav: 'Home',
+    value: '',
+  }
+
+  setValue = (e) => {
+    this.setState({
+      value: e.target.value
+    })
   }
 
   navbarSelect = (e) =>{
@@ -25,7 +32,10 @@ export class DemoPage extends Component {
     return (
       <div className = 'demoPage'>
         <TopBar title = {this.state.nav}/>
-        <Content content = {this.state.nav} />
+        <Content 
+        content = {this.state.nav}
+        value = {this.state.value}
+        setValue = {this.setValue} />
         <NavBar onClick = {this.navbarSelect}/>
       </div>
     )

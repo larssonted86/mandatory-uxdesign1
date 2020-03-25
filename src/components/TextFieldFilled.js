@@ -8,11 +8,7 @@ export class TextFieldFilled extends Component {
 
   focusTextInput = () => this.textInput.current.focus();
 
-  render() {
-    console.log(this.textInput)
-    // if(this.textInput.value !==''){
-    //   this.textLabel.classList.add('floating')
-    // }
+  render() {    
     return (
       <div  id='textContainer'
       className="textContainer"
@@ -20,16 +16,16 @@ export class TextFieldFilled extends Component {
         <input
         ref={this.textInput} 
         type='text'
-        className='textInput' 
-        defaultValue = 'test'
+        className='textInput'
+        value = {this.props.value}
+        onChange = {this.props.setValue}
         >         
         </input>
         <label
         ref={this.textLabel}  
-        className='textLabel'>Text</label>        
+        className={"textLabel" + (this.props.value? "float":"")}>Text</label>        
       </div>
     )
   }
 }
-// className={"loader " + (fetchSuccess? "hide":"")}
 export default TextFieldFilled
