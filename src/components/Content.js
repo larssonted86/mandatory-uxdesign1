@@ -25,7 +25,7 @@ export class Content extends Component {
 
         case 'Selectors':
           return <div>
-          <Checkboxes />
+          <Checkboxes title = 'test' />
           <Radiobuttons />
           <Switches />
         </div>;
@@ -37,8 +37,6 @@ export class Content extends Component {
     }
   }
   render() {
-    console.log(this.props)
-
     return (
       <div className = 'content'>
         {this.renderContentSwitch(this.props.content)}

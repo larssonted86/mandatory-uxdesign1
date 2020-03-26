@@ -6,7 +6,7 @@ $filled-color: #6a1b9a;
   align-items: center;
   position: relative;
 
-  .originalCheckbox{
+  .originalradioButton{
     position: absolute;
     width: 1px;
     height: 1px;
@@ -23,7 +23,7 @@ $filled-color: #6a1b9a;
     
   }
 
-  .checkboxIcon{
+  .RadioButtonIcon{
     height: 24px;
     width: 24px;
     fill: $filled-color;

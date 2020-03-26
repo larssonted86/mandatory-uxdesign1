@@ -4,7 +4,7 @@
   align-items: center;
   position: relative;
 }
-.container .originalCheckbox {
+.container .originalradioButton {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -18,10 +18,10 @@
   color: #0000008a;
   cursor: pointer;
 }
-.container .checkboxIcon {
+.container .RadioButtonIcon {
   height: 24px;
   width: 24px;
   fill: #6a1b9a;
 }
 
-/*# sourceMappingURL=checkbox.css.map */
+/*# sourceMappingURL=radiobutton.css.map */
