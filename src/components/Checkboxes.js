@@ -36,7 +36,7 @@ export class Checkboxes extends Component {
 
   render() {
     return (
-      <div className='container'>        
+      <div className='checkboxContainer'>        
         <input 
         id = {this.props.id}
         type = 'checkbox'
@@ -49,6 +49,7 @@ export class Checkboxes extends Component {
         onChange = {this.checkChange}
         >
         {this.toggleImage(this.state.checked)}
+        <div className = 'rippleTarget'></div>
         </label>
       </div>
     )

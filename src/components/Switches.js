@@ -14,7 +14,7 @@ export class Switches extends Component {
   
   render() {
     return (
-      <div>
+      <div className = 'switchContainer'>
         <label className="switch">
         <input type="checkbox" />
         <span className="slider round"></span>

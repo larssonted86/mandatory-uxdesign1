@@ -2,4 +2,5 @@
   height: calc(100% - 120px);
   width: 100%;
   overflow-y: hidden;
+  padding: 15px;
 }
