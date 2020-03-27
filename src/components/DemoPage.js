@@ -7,7 +7,8 @@ import Content from './Content'
 export class DemoPage extends Component {
   state = {
     nav: 'Home',
-    value: '',
+    filledvalue: '',
+    outlinedvalue: '',
     selection: '',
   }
 
@@ -18,9 +19,15 @@ export class DemoPage extends Component {
     });
 }
 
-  setValue = (e) => {
+  setFilledValue = (e) => {
     this.setState({
-      value: e.target.value
+      filledvalue: e.target.value
+    })
+  }
+
+  setOutlinedValue = (e) => {
+    this.setState({
+      outlinedvalue: e.target.value
     })
   }
 
@@ -42,8 +49,10 @@ export class DemoPage extends Component {
         <TopBar title = {this.state.nav}/>
         <Content 
         content = {this.state.nav}
-        value = {this.state.value}
-        setValue = {this.setValue}
+        filledvalue = {this.state.filledvalue}
+        setFilledValue = {this.setFilledValue}
+        outlinedvalue = {this.state.outlinedvalue}
+        setOutlinedValue = {this.setOutlinedValue}
         selection = {this.state.selection}
         changed = {this.radioChangeHandler} />
         <NavBar onClick = {this.navbarSelect}/>

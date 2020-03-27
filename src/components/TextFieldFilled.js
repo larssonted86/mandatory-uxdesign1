@@ -10,20 +10,20 @@ export class TextFieldFilled extends Component {
 
   render() {    
     return (
-      <div  id='textContainer'
-      className="textContainer"
+      <div  id='textFilledContainer'
+      className="textFilledContainer"
       onClick = {this.focusTextInput}>
         <input
         ref={this.textInput} 
         type='text'
         className='textInput'
-        value = {this.props.value}
-        onChange = {this.props.setValue}
+        value = {this.props.filledvalue}
+        onChange = {this.props.setFilledValue}
         >         
         </input>
         <label
         ref={this.textLabel}  
-        className={"textLabel" + (this.props.value? "float":"")}>Text</label>        
+        className={"textLabel" + (this.props.filledvalue? "float":"")}>Text</label>        
       </div>
     )
   }

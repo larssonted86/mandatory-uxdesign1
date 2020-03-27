@@ -16,11 +16,13 @@ export class Content extends Component {
  renderContentSwitch = (content) => {
     switch(content){
       case 'Textfields':
-        return <div>
+        return <div className = 'all-textfields-container'>
           <TextFieldFilled 
-          value = {this.props.value}
-          setValue = {this.props.setValue}/> 
-          <TextFieldOutlined />
+          filledvalue = {this.props.filledvalue}
+          setFilledValue = {this.props.setFilledValue}/> 
+          <TextFieldOutlined
+          outlinedvalue = {this.props.outlinedvalue}
+          setOutlinedValue = {this.props.setOutlinedValue} />
         </div>;
 
         case 'Selectors':
