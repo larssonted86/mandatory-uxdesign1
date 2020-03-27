@@ -8,7 +8,15 @@ export class DemoPage extends Component {
   state = {
     nav: 'Home',
     value: '',
+    selection: '',
   }
+
+  radioChangeHandler = (event) => {
+
+    this.setState({
+        selection: event.target.value
+    });
+}
 
   setValue = (e) => {
     this.setState({
@@ -35,7 +43,9 @@ export class DemoPage extends Component {
         <Content 
         content = {this.state.nav}
         value = {this.state.value}
-        setValue = {this.setValue} />
+        setValue = {this.setValue}
+        selection = {this.state.selection}
+        changed = {this.radioChangeHandler} />
         <NavBar onClick = {this.navbarSelect}/>
       </div>
     )

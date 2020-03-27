@@ -1,4 +1,43 @@
 $filled-color: #6a1b9a;
+$unchecked-color: #bdbdbd;
+
+$md-checkbox-checked-color: #6a1b9a;
+$md-checkbox-border-color: #00000089;
+$md-checkbox-size: 20px;
+$md-checkbox-checked-size: 10px; 
+$md-checkbox-ripple-size: 15px;
+$md-checkbox-ripple-hover-size: 10px;
+
+@keyframes ripple {
+
+  0% {
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.0);
+  }
+
+  50% { 
+    box-shadow: 0px 0px 0px $md-checkbox-ripple-size rgba(0, 0, 0, 0.1);
+  }
+
+  100% {
+    box-shadow: 0px 0px 0px $md-checkbox-ripple-size rgba(0, 0, 0, 0);
+  }
+}
+
+@keyframes ripple-hover {
+
+  0% {
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.0);
+  }
+
+  50% { 
+    box-shadow: 0px 0px 0px $md-checkbox-ripple-hover-size rgba(0, 0, 0, 0.1);
+  }
+
+  100% {
+    box-shadow: 0px 0px 0px $md-checkbox-ripple-hover-size rgba(0, 0, 0, 0);
+  }
+}
+
 
 .container{
   padding: 15px;
@@ -11,7 +50,8 @@ $filled-color: #6a1b9a;
     width: 1px;
     height: 1px;
     opacity: 0;
-    cursor: pointer;    
+    cursor: pointer;   
+    
   }
 
   label{
@@ -20,13 +60,28 @@ $filled-color: #6a1b9a;
     font-size: 24px;
     color:#0000008a;
     cursor: pointer;
+
+    
     
   }
 
-  .checkboxIcon{
+  .unCheckedCheckbox{
+    height: 24px;
+    width: 24px;
+    fill: $unchecked-color; 
+
+    &:hover{
+      animation: ripple-hover 2s linear 0.5s 10 normal forwards;
+    }
+
+  }
+
+  
+  .checkedCheckbox{
     height: 24px;
     width: 24px;
     fill: $filled-color;
+
   }
 
 }

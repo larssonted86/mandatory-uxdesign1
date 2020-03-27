@@ -25,8 +25,26 @@ export class Content extends Component {
 
         case 'Selectors':
           return <div>
-          <Checkboxes title = 'test' />
-          <Radiobuttons />
+          <Checkboxes id = 'checkbox1' />
+          <Checkboxes id = 'checkbox2' />
+          <Checkboxes id = 'checkbox3' />
+          
+          <Radiobuttons 
+                        changed={ this.props.changed } 
+                        id="1" 
+                        isSelected={ this.props.selection === "option 1" } 
+                        label="Option 1" 
+                        value="option 1" 
+                    />
+
+                    <Radiobuttons
+                        changed={ this.props.changed } 
+                        id="2" 
+                        isSelected={ this.props.selection === "option 2" } 
+                        label="Option 2" 
+                        value="option 2" 
+                    />
+          
           <Switches />
         </div>;
 

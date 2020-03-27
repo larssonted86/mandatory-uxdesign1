@@ -13,16 +13,16 @@ export class Checkboxes extends Component {
     switch(state){
       case true:
       return <Checked 
-                htmlFor = 'originalCheckbox'
-                className = 'checkboxIcon'        
+                htmlFor = {this.props.id}
+                className = 'checkedCheckbox'        
                 onChange = {this.checkChange}
                 alt = 'checked'/>
       
 
      default: 
      return <Unchecked 
-              htmlFor = 'originalCheckbox'
-              className = 'checkboxIcon'           
+              htmlFor = {this.props.id}
+              className = 'unCheckedCheckbox'           
               onChange = {this.checkChange}
               alt = 'unchecked'/>
     }
@@ -33,19 +33,19 @@ export class Checkboxes extends Component {
       checked: e.target.checked
     })
   }
-  
+
   render() {
     return (
       <div className='container'>        
         <input 
-        id = 'originalCheckbox'
+        id = {this.props.id}
         type = 'checkbox'
         className = 'originalCheckbox'
         onChange = {this.checkChange}
 
         ></input>
         <label 
-        htmlFor = 'originalCheckbox'
+        htmlFor = {this.props.id}
         onChange = {this.checkChange}
         >
         {this.toggleImage(this.state.checked)}

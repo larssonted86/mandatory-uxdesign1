@@ -1,3 +1,25 @@
+@keyframes ripple {
+  0% {
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0);
+  }
+  50% {
+    box-shadow: 0px 0px 0px 15px rgba(0, 0, 0, 0.1);
+  }
+  100% {
+    box-shadow: 0px 0px 0px 15px rgba(0, 0, 0, 0);
+  }
+}
+@keyframes ripple-hover {
+  0% {
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0);
+  }
+  50% {
+    box-shadow: 0px 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  100% {
+    box-shadow: 0px 0px 0px 10px rgba(0, 0, 0, 0);
+  }
+}
 .container {
   padding: 15px;
   display: flex;
@@ -18,7 +40,15 @@
   color: #0000008a;
   cursor: pointer;
 }
-.container .checkboxIcon {
+.container .unCheckedCheckbox {
+  height: 24px;
+  width: 24px;
+  fill: #bdbdbd;
+}
+.container .unCheckedCheckbox:hover {
+  animation: ripple-hover 2s linear 0.5s 10 normal forwards;
+}
+.container .checkedCheckbox {
   height: 24px;
   width: 24px;
   fill: #6a1b9a;
