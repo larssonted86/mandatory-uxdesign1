@@ -25,7 +25,8 @@ $md-radio-ripple-size: 15px;
     margin: 16px 0;
 
     input[type="radio"] {
-        display: none;
+      position:fixed;
+      opacity:0;
 
         &:checked + label:before {
             border-color: $md-radio-checked-color;
@@ -35,6 +36,18 @@ $md-radio-ripple-size: 15px;
         &:checked + label:after {
             transform: scale(1);
         }
+
+        &:disabled + label:before{
+          border: 2px solid lightgray;
+          color: lightgray;
+        }
+        &:disabled + label{
+          color: lightgray;
+        }
+    }
+
+    &:focus-within{
+      outline: solid 1px $md-radio-checked-color;
     }
 
     label {
@@ -69,6 +82,6 @@ $md-radio-ripple-size: 15px;
             height:$md-radio-checked-size;
             transform: scale(0);
             background:$md-radio-checked-color;
-        }
+        }        
     }
 }

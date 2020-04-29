@@ -23,12 +23,21 @@
   box-shadow: rgba(93, 5, 128, 0.5) 0 0 20px;
   background-color: rgba(93, 5, 128, 0.246);
 }
+.checkboxContainer:focus-within {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.8) 0px 0 20px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.8) 0 0 30px;
+  box-shadow: rgba(93, 5, 128, 0.5) 0 0 20px;
+  background-color: rgba(93, 5, 128, 0.246);
+}
 .checkboxContainer .originalCheckbox {
   position: absolute;
   width: 1px;
   height: 1px;
   opacity: 0;
   cursor: pointer;
+}
+.checkboxContainer .originalCheckbox:disabled + label > .unCheckedCheckbox {
+  fill: #bdbdbd;
 }
 .checkboxContainer label {
   display: inline-flex;
@@ -41,7 +50,7 @@
 .checkboxContainer .unCheckedCheckbox {
   height: 24px;
   width: 24px;
-  fill: #bdbdbd;
+  fill: #00000089;
 }
 .checkboxContainer .checkedCheckbox {
   height: 24px;

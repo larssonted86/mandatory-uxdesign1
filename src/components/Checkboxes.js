@@ -16,7 +16,8 @@ export class Checkboxes extends Component {
                 htmlFor = {this.props.id}
                 className = 'checkedCheckbox'        
                 onChange = {this.checkChange}
-                alt = 'checked'/>
+                alt = 'checked'
+                />
       
 
      default: 
@@ -24,7 +25,8 @@ export class Checkboxes extends Component {
               htmlFor = {this.props.id}
               className = 'unCheckedCheckbox'           
               onChange = {this.checkChange}
-              alt = 'unchecked'/>
+              alt = 'unchecked'
+              />
     }
   }
 
@@ -41,12 +43,12 @@ export class Checkboxes extends Component {
         id = {this.props.id}
         type = 'checkbox'
         className = 'originalCheckbox'
-        onChange = {this.checkChange}
-
+        onClick = {this.checkChange}
+        disabled = {this.props.disabled}        
         ></input>
         <label 
         htmlFor = {this.props.id}
-        onChange = {this.checkChange}
+        onClick = {this.checkChange}        
         >
         {this.toggleImage(this.state.checked)}
         <div className = 'rippleTarget'></div>

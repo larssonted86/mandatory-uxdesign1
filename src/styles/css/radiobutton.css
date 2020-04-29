@@ -14,7 +14,8 @@
   margin: 16px 0;
 }
 .RadioButton input[type=radio] {
-  display: none;
+  position: fixed;
+  opacity: 0;
 }
 .RadioButton input[type=radio]:checked + label:before {
   border-color: #6a1b9a;
@@ -22,6 +23,16 @@
 }
 .RadioButton input[type=radio]:checked + label:after {
   transform: scale(1);
+}
+.RadioButton input[type=radio]:disabled + label:before {
+  border: 2px solid lightgray;
+  color: lightgray;
+}
+.RadioButton input[type=radio]:disabled + label {
+  color: lightgray;
+}
+.RadioButton:focus-within {
+  outline: solid 1px #6a1b9a;
 }
 .RadioButton label {
   display: inline-block;

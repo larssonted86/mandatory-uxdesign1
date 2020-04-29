@@ -16,7 +16,7 @@ export class Switches extends Component {
     return (
       <div className = 'switchContainer'>
         <label className="switch">
-        <input type="checkbox" />
+        <input type="checkbox" disabled={this.props.disabled} />
         <span className="slider round"></span>
         </label>
       </div>

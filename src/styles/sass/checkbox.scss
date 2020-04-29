@@ -1,5 +1,6 @@
 $filled-color: #6a1b9a;
-$unchecked-color: #bdbdbd;
+$unchecked-color: #00000089;
+$unchecked-disabled-color: #bdbdbd;
 
 $md-checkbox-checked-color: #6a1b9a;
 $md-checkbox-border-color: #00000089;
@@ -39,7 +40,13 @@ $md-checkbox-ripple-hover-size: 10px;
     background-color: rgba(93, 5, 128, 0.246) ;
   }
 
-
+  &:focus-within{
+    -webkit-box-shadow: rgba(0,0,0,0.8) 0px 0 20px;
+    -moz-box-shadow: rgba(0,0,0,0.8) 0 0 30px;
+    box-shadow: rgba(93, 5, 128, 0.500) 0 0 20px;
+    background-color: rgba(93, 5, 128, 0.246) ;
+  }
+  
   
 
   .originalCheckbox{
@@ -48,6 +55,10 @@ $md-checkbox-ripple-hover-size: 10px;
     height: 1px;
     opacity: 0;
     cursor: pointer;
+
+    &:disabled + label > .unCheckedCheckbox{
+      fill: $unchecked-disabled-color;
+    }
   }
 
   label{
@@ -56,13 +67,15 @@ $md-checkbox-ripple-hover-size: 10px;
     font-size: 24px;
     color:#0000008a;
     cursor: pointer;
-    border-radius: 50px;    
+    border-radius: 50px;
+    
+   
   }
 
   .unCheckedCheckbox{
     height: 24px;
     width: 24px;
-    fill: $unchecked-color; 
+    fill: $unchecked-color;
   }
 
   

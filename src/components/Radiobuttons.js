@@ -7,7 +7,15 @@ export class Radiobuttons extends Component {
     return (
       <div className='radioButtonContainer'>        
         <div className="RadioButton">
-            <input id={this.props.id} onChange={this.props.changed} value={this.props.value} type="radio" checked={this.props.isSelected} />
+            <input 
+            id={this.props.id} 
+            onChange={this.props.changed} 
+            value={this.props.value} 
+            type="radio" 
+            checked={this.props.isSelected} 
+            name={this.props.name} 
+            tabIndex='0' 
+            disabled={this.props.disabled} />
             <label htmlFor={this.props.id}>{this.props.label}</label>
         </div>
         
